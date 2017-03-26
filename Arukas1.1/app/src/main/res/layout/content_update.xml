@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.xbw.arukas.UpdateActivity"
+    tools:showIn="@layout/activity_update">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp">
+
+            <com.xbw.arukas.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Configuration"
+                android:id="@+id/tv_status"
+                app:fontFamily="Muli-Regular.ttf"
+                android:textSize="22sp"/>
+
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <com.xbw.arukas.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="App Name"
+                    app:fontFamily="Muli-Regular.ttf"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"  />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <EditText
+                    android:id="@+id/ET_appname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter application name here"
+                    android:gravity="right"
+                    android:background="@drawable/btn_innew"
+                    android:textColorHint="#f8e9e9" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <com.xbw.arukas.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Image*"
+                    app:fontFamily="Muli-Regular.ttf"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"  />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <EditText
+                    android:id="@+id/ET_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="nginx:latest"
+                    android:gravity="right"
+                    android:background="@drawable/btn_innew"
+                    android:textColorHint="#f8e9e9" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="  ! Supported Docker Hub public repository only."
+                    android:gravity="right"
+                    android:textSize="10dp"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <com.xbw.arukas.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Instances*"
+                    app:fontFamily="Muli-Regular.ttf"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <SeekBar
+                    android:id="@+id/SB_instances"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:maxHeight="4.0dip"
+                    android:minHeight="4.0dip"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="16.0dip"
+                    android:max="9"
+                    android:thumb="@drawable/seekbar_thumb"
+                    android:layout_toLeftOf="@+id/textViewsb"
+                    android:layout_marginRight="20dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="1"
+                    android:textSize="18dp"
+                    android:id="@+id/textViewsb"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <com.xbw.arukas.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Memory*"
+                    app:fontFamily="Muli-Regular.ttf"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+                <RadioGroup
+                    android:id="@+id/mRadioGroup_mem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/RadioA_mem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="256M"
+                        android:checked="true"/>
+                    <RadioButton
+                        android:id="@+id/RadioB_mem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="512M" />
+                </RadioGroup>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <com.xbw.arukas.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Endpoint "
+                    app:fontFamily="Muli-Regular.ttf"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <EditText
+                    android:id="@+id/ET_endpoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="set automatically if it's blank"
+                    android:gravity="right"
+                    android:background="@drawable/btn_innew"
+                    android:textColorHint="#f8e9e9" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="  .arukascloud.io"
+                    android:gravity="right"
+                    android:textSize="10dp"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <com.xbw.arukas.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Port*( 20 or less )"
+                    app:fontFamily="Muli-Regular.ttf"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/Img_Padd"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/btnadd" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearport"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <!--listview布局极其不适用，会遮挡部分item，采用linearlayout addview增加item方式，   -->
+                <!--哇，很难受，原来是 listview 与 ScorllView冲突，重写listview计算高度就好了  -->
+
+                <com.xbw.arukas.Utils.MyListView
+                    android:id="@+id/listview_port"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:visibility="visible">
+
+                </com.xbw.arukas.Utils.MyListView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <com.xbw.arukas.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="ENV( 20 or less )"
+                    app:fontFamily="Muli-Regular.ttf"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/Img_Eadd"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/btnadd" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearenv"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+                <com.xbw.arukas.Utils.MyListView
+                    android:id="@+id/listview_env"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:visibility="visible">
+
+                </com.xbw.arukas.Utils.MyListView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <com.xbw.arukas.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="CMD"
+                    app:fontFamily="Muli-Regular.ttf"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <EditText
+                    android:id="@+id/ET_cmd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="/foo/bar.sh"
+                    android:gravity="right"
+                    android:background="@drawable/btn_innew"
+                    android:textColorHint="#f8e9e9" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="  4096 bytes"
+                    android:gravity="right"
+                    android:textSize="10dp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <Button
+                    android:id="@+id/Btn_create"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Update Application"
+                    android:background="@drawable/btn_innew"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
