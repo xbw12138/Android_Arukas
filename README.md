@@ -3,16 +3,21 @@
 Arukas docker的安卓客户端。
 
 功能：
-创建docker；
-删除docker；
-更新docker；
-启动docker；
-停止docker；
+1.创建docker；
+
+2.删除docker；
+
+3.更新docker；
+
+4.启动docker；
+
+5.停止docker；
 
 特别功能：镜像安装 xbw12138/auto-shadowsocks 
 
-一键SSH连接docker；
-一键配置shadowsocks；
+1.一键SSH连接docker；
+
+2.一键配置shadowsocks；
 
 客户端已经在应用宝上线，
 http://sj.qq.com/myapp/detail.htm?apkName=com.xbw.arukas
