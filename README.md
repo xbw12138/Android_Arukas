@@ -31,11 +31,17 @@ http://sj.qq.com/myapp/detail.htm?apkName=com.xbw.arukas
 -------
 
 新浪微博 ：  DMT许博文
+
 CSDN ：     xbw12138
+
 QQ ：       1076351865
 
 -------
 
-
+![image](https://github.com/xbw12138/Android_Arukas/blob/master/image/a1.png)
+![image](https://github.com/xbw12138/Android_Arukas/blob/master/image/a2.png)
+![image](https://github.com/xbw12138/Android_Arukas/blob/master/image/a3.png)
+![image](https://github.com/xbw12138/Android_Arukas/blob/master/image/a4.png)
+![image](https://github.com/xbw12138/Android_Arukas/blob/master/image/a5.png)
 
 
