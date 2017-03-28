@@ -15,6 +15,7 @@ public class Data {
     private String type;
     private Attributes attributes;
     private Relationships relationships;
+    private Container container;
     public void setId(String id) {
          this.id = id;
      }
@@ -42,5 +43,11 @@ public class Data {
      public Relationships getRelationships() {
          return relationships;
      }
+    public void setContainer(Container container){
+        this.container=container;
+    }
+    public Container getContainer(){
+        return container;
+    }
 
 }

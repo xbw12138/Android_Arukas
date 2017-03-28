@@ -33,6 +33,8 @@ import com.umeng.analytics.MobclickAgent;
 import com.xbw.arukas.Adapter.MainAdapter;
 import com.xbw.arukas.Config.Config;
 import com.xbw.arukas.Model.MainModel;
+import com.xbw.arukas.gsonAPP.Container;
+import com.xbw.arukas.gsonAPP.DataContainer;
 import com.xbw.arukas.gsonAPP.JsonAppBean;
 
 import org.json.JSONException;
@@ -47,10 +49,15 @@ import java.util.List;
 import java.util.Map;
 import com.xbw.arukas.gsonAPP.Data;
 import com.xbw.arukas.gsonAPP.Attributes;
+import com.xbw.arukas.gsonAPP.Relationships;
+
 public class MainActivity extends AppCompatActivity {
     private JsonAppBean jsonAppBean;
     private Data data;
     private Attributes attributes;
+    private Container container;
+    private DataContainer datacontainer;
+    private Relationships relationships;
     private ListView listviewmain;
     private MainAdapter mainAdapter;
     private SwipeRefreshLayout swipeRefreshLayout;
@@ -100,12 +107,20 @@ public class MainActivity extends AppCompatActivity {
                 for(int i=0;i<jsonAppBean.getData().size();i++){
                     MainModel mainModel=new MainModel();
                     data=jsonAppBean.getData().get(i);
+                    //Log.d(data.getId()+"","@@@@");
                     attributes=data.getAttributes();
+                    //感到世界深深的恶意，刚特么放手没两天，Arukas偷偷修改了API
+                    //2017-03-28修改
+                    relationships=data.getRelationships();
+                    container=relationships.getContainer();
+                    datacontainer=container.getDataContainer();
                     mainModel.setAppname(attributes.getName());
-                    mainModel.setAppid(attributes.getImageId());
+                    //mainModel.setAppid(attributes.getImageId());
+                    mainModel.setAppid(datacontainer.getId());
                     mainModel.setApptime(getTime(attributes.getCreatedAt()));
                     mainModel.setAppdelid(data.getId());
                     mDate.add(mainModel);
+                    //Log.d(""+getTime(attributes.getCreatedAt()),"#####"+datacontainer.getId());
                     //addItem(attributes.getName(), new String[]{"CID:"+attributes.getImageId(), "Created At:"+getTime(attributes.getCreatedAt()),data.getId()}, getColors(i%3), R.drawable.ic_ghost);
                 }
                 mainAdapter=new MainAdapter(MainActivity.this,mDate);

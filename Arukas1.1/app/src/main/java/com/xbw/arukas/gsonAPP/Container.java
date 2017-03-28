@@ -11,12 +11,20 @@ package com.xbw.arukas.gsonAPP;
  */
 public class Container {
 
-    private Data data;
+    private Data data1;
+    private DataContainer data;
     public void setData(Data data) {
-         this.data = data;
+         this.data1 = data;
      }
      public Data getData() {
-         return data;
+         return data1;
      }
+
+    public void setDataContainer(DataContainer data) {
+        this.data = data;
+    }
+    public DataContainer getDataContainer() {
+        return data;
+    }
 
 }
