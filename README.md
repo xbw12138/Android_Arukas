@@ -35,13 +35,25 @@ http://sj.qq.com/myapp/detail.htm?apkName=com.xbw.arukas
 
 -------
 
-新浪微博 ：  DMT许博文
+新浪微博 ：  DMT许博文  [DMT许博文](http://weibo.com/u/5368201773)
 
-CSDN ：     xbw12138
+CSDN ：     xbw12138  [xbw12138](http://blog.csdn.net/xbw12138)
 
 QQ ：       1076351865
 
 -------
+
+
+版本更新
+
+-------
+
+2017-04-04 
+修改ui，增加SS二维码生成模块
+
+-------
+
+
 
 ![image](https://github.com/xbw12138/Android_Arukas/blob/master/image/a1.png)
 ![image](https://github.com/xbw12138/Android_Arukas/blob/master/image/a2.png)
