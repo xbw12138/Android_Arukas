@@ -151,6 +151,7 @@ public class DetailActivity extends BaseLeftActivity {
     private Switch sw_status;
 
     private Button btn_ssh;
+    private Button btn_qrcode;
     private EditText btn_ss;
     private boolean openswitch=false;
 
@@ -211,6 +212,7 @@ public class DetailActivity extends BaseLeftActivity {
         tv_status = (TextView) findViewById(R.id.tv_status);
         sw_status = (Switch) findViewById(R.id.switch1);
         btn_ssh = (Button) findViewById(R.id.Btn_ssh);
+        btn_qrcode = (Button) findViewById(R.id.Btn_qrcode);
         btn_ss = (EditText) findViewById(R.id.Btn_ss);
         //监听switch状态不适用。
         /*sw_status.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -232,6 +234,15 @@ public class DetailActivity extends BaseLeftActivity {
                 } else {
                     getStart(containerID);
                 }
+            }
+        });
+        btn_qrcode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(DetailActivity.this, WebActivity.class);
+                intent.putExtra("url", "file:///android_asset/qrcode.html?url="+btn_ss.getText().toString());
+                startActivity(intent);
             }
         });
         btn_ssh.setOnClickListener(new View.OnClickListener() {
@@ -287,12 +298,12 @@ public class DetailActivity extends BaseLeftActivity {
                 }
             }
         });
-        btn_ss.setOnClickListener(new View.OnClickListener() {
+        /*btn_ss.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
             }
-        });
+        });*/
     }
 
     private void getStart(String id){
@@ -487,7 +498,9 @@ public class DetailActivity extends BaseLeftActivity {
                         }
                         String host = bb[1] + "." + bb[2] + "." + bb[3] + "." + ee[0] + ":" + cc[0];
                         btn_ss.setVisibility(View.VISIBLE);
+                        btn_qrcode.setVisibility(View.VISIBLE);
                         btn_ss.setText("ss://aes-256-cfb:xbw12138@"+host);
+
                     }
 
                 }

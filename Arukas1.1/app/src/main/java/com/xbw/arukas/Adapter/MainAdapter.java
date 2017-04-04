@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
@@ -71,6 +72,17 @@ public class MainAdapter extends BaseAdapter {
         viewHolderMain.TV_time=(TextView)view.findViewById(R.id.sub_time);
         viewHolderMain.Img_detail=(ImageView) view.findViewById(R.id.detail_item);
         viewHolderMain.Img_del=(ImageView) view.findViewById(R.id.remove_item);
+        viewHolderMain.mainLinear=(LinearLayout)view.findViewById(R.id.main_linear);
+        viewHolderMain.mainLinear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent();
+                intent.setClass(mContext,DetailActivity.class);
+                intent.putExtra("containerID",mainModel.getAppid());
+                intent.putExtra("name",mainModel.getAppname());
+                mContext.startActivity(intent);
+            }
+        });
         //view.setTag(viewHolderMain);
         //}else{
         //    viewHolderMain=(ViewHolderMain)view.getTag();
@@ -164,5 +176,6 @@ public class MainAdapter extends BaseAdapter {
         private static ImageView Img_del;
         private static ImageView Img_detail;
         private static TextView TV_detail;
+        private static LinearLayout mainLinear;
     }
 }
