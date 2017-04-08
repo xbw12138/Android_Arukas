@@ -63,6 +63,7 @@
             android:gravity="bottom|center"
             android:layout_gravity="bottom"
             android:textSize="10dp"
+            android:visibility="gone"
             android:text="copyright © 2017 xubowen all rights reserved"/>
     </FrameLayout>
 

@@ -180,8 +180,8 @@ public class UpdateActivity extends BaseLeftActivity {
             for(int i=0;i<cao.length;i++){
                 String hh[]=cao[i].split("=");
                 Envs e=new Envs();
-                e.setValue(hh[0]);
-                e.setKey(hh[1]);
+                e.setValue(hh[1]);//修改错误
+                e.setKey(hh[0]);
                 listenv.add(e);
             }
         }

@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -152,6 +153,8 @@ public class DetailActivity extends BaseLeftActivity {
 
     private Button btn_ssh;
     private Button btn_qrcode;
+    private LinearLayout linear_ss;
+    private LinearLayout linear_qrcode;
     private EditText btn_ss;
     private boolean openswitch=false;
 
@@ -214,6 +217,8 @@ public class DetailActivity extends BaseLeftActivity {
         btn_ssh = (Button) findViewById(R.id.Btn_ssh);
         btn_qrcode = (Button) findViewById(R.id.Btn_qrcode);
         btn_ss = (EditText) findViewById(R.id.Btn_ss);
+        linear_ss = (LinearLayout) findViewById(R.id.Linear_ss);
+        linear_qrcode = (LinearLayout) findViewById(R.id.Linear_qrcode);
         //监听switch状态不适用。
         /*sw_status.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -497,8 +502,10 @@ public class DetailActivity extends BaseLeftActivity {
                             }
                         }
                         String host = bb[1] + "." + bb[2] + "." + bb[3] + "." + ee[0] + ":" + cc[0];
-                        btn_ss.setVisibility(View.VISIBLE);
-                        btn_qrcode.setVisibility(View.VISIBLE);
+                        //btn_ss.setVisibility(View.VISIBLE);
+                        linear_ss.setVisibility(View.VISIBLE);
+                        //btn_qrcode.setVisibility(View.VISIBLE);
+                        linear_qrcode.setVisibility(View.VISIBLE);
                         btn_ss.setText("ss://aes-256-cfb:xbw12138@"+host);
 
                     }
