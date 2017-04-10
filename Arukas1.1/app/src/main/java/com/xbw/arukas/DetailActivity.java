@@ -29,6 +29,7 @@ import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.umeng.analytics.MobclickAgent;
 import com.xbw.arukas.Config.Config;
+import com.xbw.arukas.Utils.SSHHelp;
 import com.xbw.arukas.gsonContainer.Attributes;
 import com.xbw.arukas.gsonContainer.Data;
 import com.xbw.arukas.gsonContainer.Envs;
@@ -48,6 +49,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import com.xbw.arukas.Utils.SSHHelp;
 
 import android.os.Handler;
 public class DetailActivity extends BaseLeftActivity {
@@ -158,6 +160,8 @@ public class DetailActivity extends BaseLeftActivity {
     private EditText btn_ss;
     private boolean openswitch=false;
 
+    private SSHHelp sshHelp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -192,6 +196,7 @@ public class DetailActivity extends BaseLeftActivity {
                 //Toast.makeText(DetailActivity.this,"暂未开放",Toast.LENGTH_SHORT).show();
             }
         });
+        //sshHelp.exec("153.125.239.172", "root", "password", 31699, "/etc/init.d/shadowsocks restart;");
     }
     public void onResume() {
         super.onResume();
@@ -511,8 +516,6 @@ public class DetailActivity extends BaseLeftActivity {
                     }
 
                 }
-
-
                 /*date+="Created at: "+created_at+"\n"
                 +"Updated at: "+updated_at+"\n"
                 +"Status: "+status_text+"\n";
@@ -538,7 +541,6 @@ public class DetailActivity extends BaseLeftActivity {
             }
         };
         mQueue.add(stringRequest);
-
     }
     private String getSettingNote(String s){//获取保存设置
         SharedPreferences read = getSharedPreferences(Config.SHPF_COOKIE_INFO, MODE_PRIVATE);
@@ -551,4 +553,7 @@ public class DetailActivity extends BaseLeftActivity {
         String c= b[0].replace("T"," ");
         return c+"(东京)";
     }
+
+
+
 }

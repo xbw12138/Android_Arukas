@@ -31,4 +31,5 @@ dependencies {
     compile files('src/main/jniLibs/GDTUnionSDK.4.9.543.min.jar')
     compile files('src/main/jniLibs/umeng-analytics-v6.0.9.jar')
     compile files('src/main/jniLibs/utdid4all-1.0.4.jar')
+    compile files('src/main/jniLibs/jsch-0.1.54.jar')
 }

@@ -316,7 +316,7 @@
                     android:layout_marginRight="20dp"
                     android:gravity="center_horizontal|center_vertical"
                     android:text="SS二维码"
-                    android:visibility="gone"
+
                     android:background="@drawable/btn_innew"/>
             </RelativeLayout>
         </LinearLayout>
@@ -343,7 +343,7 @@
                     android:textSize="12dp"
                     android:gravity="center_horizontal|center_vertical"
                     android:text="Shadowsocks"
-                    android:visibility="gone"
+
                     android:background="@drawable/btn_innew"/>
             </RelativeLayout>
         </LinearLayout>
